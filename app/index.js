@@ -1,29 +1,19 @@
-import { Stack } from "expo-router";
-import { View, Text } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
-import { SafeAreaView } from "react-native-safe-area-context";
-import HomeButton from "./components/HomeButton";
+import { ScrollView } from "react-native";
 import HomeC from "./components/HomeC";
-import Add from "./components/Add";
-import Report from "./components/Report";
+import { LogBox } from "react-native"
+import { theme } from "./Style";
+import { NativeBaseProvider } from "native-base";
+import { Stack } from "expo-router";
+
+LogBox.ignoreLogs([ 'In React 18, SSRProvider is not necessary and is a noop. You can remove it from your app.', ])
 
 
-const Home = () => {
+const Home = () => {    
     return (
-        <SafeAreaView>
-            <Stack.Screen options={{
-                headerShadowVisible: false,
-                headerLeft: () => {<HomeButton/>},
-                headerTitle:""
-            }}/>
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <View>
-                    <HomeC></HomeC>
-                    <Add></Add>
-                    <Report></Report>
-                </View>
-            </ScrollView>            
-        </SafeAreaView>
+        <NativeBaseProvider theme={theme}>
+            <Stack.Screen options={{headerTitle: "",}}/>
+            <HomeC></HomeC>
+        </NativeBaseProvider>
     );
 };
 

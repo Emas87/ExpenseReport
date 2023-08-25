@@ -1,21 +1,16 @@
 import { router } from 'expo-router'
-import React from 'react'
-//import PropTypes from 'prop-types'
-import { Text, View } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { Box, Button, Text } from 'native-base'
 
 function HomeC() {
   return (
-    <View>
+    <Box >
         <Text>
             Welcome
         </Text>
-        <Text onPress={() => {router.push('/report')}}> Report expenses</Text>
-        <Text onPress={() => {router.push('/add')}}>Add new expense</Text>
-    </View>
+        <Button variant="ghost" onPress={() => {router.push('/pages/Report')}}>Report expenses</Button>
+        <Button variant="ghost" onPress={() => {router.push('/pages/Add')}}>Add new expense</Button>
+    </Box>
   )
 }
-
-//HomeC.propTypes = {}
 
 export default HomeC
