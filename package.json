@@ -17,6 +17,7 @@
     "expo-linking": "~5.0.2",
     "expo-router": "2.0.0",
     "expo-splash-screen": "~0.20.4",
+    "expo-sqlite": "^11.3.3",
     "expo-status-bar": "~1.6.0",
     "native-base": "^3.4.28",
     "normalize-css-color": "^1.0.2",

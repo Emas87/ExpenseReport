@@ -8,6 +8,18 @@
       "expo-router"
     ],
     "name": "ExpenseReport",
-    "slug": "ExpenseReport"
+    "slug": "ExpenseReport",
+    "owner": "eswissmaster",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "baa29df4-736d-41d2-9e01-0d1608abed36"
+      }
+    },
+    "android": {
+      "package": "com.eswissmaster.ExpenseReport"
+    }
   }
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import DateTimePicker, { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
-import { Button, Text } from 'native-base';
+import { Button, Text, theme } from 'native-base';
 import { SafeAreaView } from 'react-native';
 
 function DatePicker({isDate, date, setDate}) {
@@ -34,8 +34,8 @@ function DatePicker({isDate, date, setDate}) {
 
   return (
     <SafeAreaView>    
-      {isDate && <Button onPress={showDatepicker}> Select date </Button>}
-      {!isDate && <Button onPress={showTimepicker}> Select time</Button>}
+      {isDate && <Button colorScheme="tertiary" onPress={showDatepicker}> Select date </Button>}
+      {!isDate && <Button colorScheme="tertiary" onPress={showTimepicker}> Select time</Button>}
       <Text>selected: {date.toLocaleString()}</Text>
       {show && (
         <DateTimePicker
@@ -44,6 +44,9 @@ function DatePicker({isDate, date, setDate}) {
           mode={mode}
           is24Hour={true}
           onChange={onChange}
+          colorScheme="tertiary"
+          positiveButton={{label: 'OK', textColor: theme.colors.tertiary[700]}}
+          negativeButton={{label: 'Cancel', textColor: theme.colors.danger[500]}}
         />
       )}
     </SafeAreaView>
