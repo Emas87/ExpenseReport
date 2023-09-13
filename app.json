@@ -10,6 +10,14 @@
     "name": "ExpenseReport",
     "slug": "ExpenseReport",
     "owner": "eswissmaster",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "extra": {
       "router": {
         "origin": false
@@ -19,6 +27,10 @@
       }
     },
     "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
       "package": "com.eswissmaster.ExpenseReport"
     }
   }
